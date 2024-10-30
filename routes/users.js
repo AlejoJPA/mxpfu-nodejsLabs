@@ -21,6 +21,13 @@ let users = [
         email:"joyalwhite@gamil.com",
         DOB:"21-03-1989",
     },
+    {
+      firstName: "Jon",
+      lastName: "Lovato",
+      email:"jonlovato@theworld.com",
+      DOB:"10/10/1995",
+    },
+    
 ];
 
 // GET request: Retrieve all users
@@ -42,7 +49,14 @@ router.get("/:email",(req,res)=>{
 // POST request: Create a new user
 router.post("/",(req,res)=>{
   // Copy the code here
-  res.send("Yet to be implemented")//This line is to be replaced with actual return value
+  //res.send("Yet to be implemented")//This line is to be replaced with actual return value
+  user.push({
+    "firstName": req.query.firstName, 
+    "lastName": req.query.lastName, 
+    "email": req.query.email,
+    "DOB": req.query.DOB
+  });
+  res.send("The user " + req.query.firstName + " has been added!"); // In the message it was used: "firstName": req.query.firstName
 });
 
 
