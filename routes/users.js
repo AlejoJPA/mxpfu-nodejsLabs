@@ -26,7 +26,7 @@ let users = [
       lastName: "Lovato",
       email:"jonlovato@theworld.com",
       DOB:"10/10/1995",
-    },
+    }
     
 ];
 
